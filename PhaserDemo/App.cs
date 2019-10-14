@@ -76,7 +76,7 @@ namespace PhaserDemo
                     return new Game(800, 600, Phaser.AUTO, "phaserRoot", state3);
                 case 4:
                     var state4 = new GameState4();
-                    return new Game(800, 600, Phaser.CANVAS, "phaserRoot", state4);
+                    return new Game(700, 300, Phaser.CANVAS, "phaserRoot", state4);
             default:
                     throw new ArgumentOutOfRangeException(nameof(number));
             }

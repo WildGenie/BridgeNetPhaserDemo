@@ -46,7 +46,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bridge.json" />
-    <None Include="bridge.f.json" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
