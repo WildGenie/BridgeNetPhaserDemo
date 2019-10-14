@@ -12,6 +12,7 @@ namespace PhaserDemo.Games
         private Sprite ship;
         private Rectangle view;
         private TileSprite space;
+        private Polygon ground;
 
         Text konumText;
         Text aciText;
@@ -57,6 +58,22 @@ namespace PhaserDemo.Games
             hizText = game.add.text(10, 70, "", new { font = "18px Arial", fill = "#fff" });
             ivmeText = game.add.text(10, 100, "", new { font = "18px Arial", fill = "#fff" });
 
+
+
+            ground = new Phaser.Polygon(new Phaser.Point(0, 300),
+                                        new Phaser.Point(0, 290),
+                                        new Phaser.Point(100, 250),
+                                        new Phaser.Point(150, 150),
+                                        new Phaser.Point(300, 200),
+                                        new Phaser.Point(400, 285),
+                                        new Phaser.Point(550, 285),
+                                        new Phaser.Point(699, 220),
+                                        new Phaser.Point(699, 300)
+                                        );
+            var graphics = game.add.graphics(0, 0);
+            graphics.beginFill(0xFF33ff);
+            graphics.drawPolygon(ground.points);
+            graphics.endFill();
 
             motor = 40;
 
